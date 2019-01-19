@@ -1,0 +1,15 @@
+<div [ngClass]="{'card': true,
+                'm-3': true,
+                'blog-success': post.loveIts > 0,
+                'blog-danger': post.loveIts < 0}">
+    <div class="card-header">
+        <h1>{{ post.title }}</h1>
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            {{ post.content }}
+        </p>
+    </div>
+</div>
+
+<button class="btn btn-default" (click)="onBack()">< Retour</button>

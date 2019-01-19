@@ -1,0 +1,26 @@
+<li [ngClass]="{'list-group-item': true,
+                'mb-3': true,
+                'list-group-item-success': post.loveIts > 0,
+                'list-group-item-danger': post.loveIts < 0}"
+    (click)="onViewPost()">
+    <div class="row">
+    <div class="col col-12">
+        <div class="row">
+            <h4 class="col col-6">{{ post.title }}</h4>
+            <h4 class="col col-6 text-right">{{ post.created_at | date: 'd MMMM y à HH:mm': 'CET': 'fr' }}</h4>
+        </div>
+        <p>{{ post.content }}</p>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success mr-2" (click)="addLove()">Love It!</button>
+                <button class="btn btn-danger" (click)="removeLove()">Don't love it!</button>
+            </div>
+            <div class="col">
+                <div class="row  justify-content-end">
+                    <button class="btn btn-danger" (click)="removeThisPost()">Supprimer le post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</li>
