@@ -1,4 +1,7 @@
-<div class="card m-3">
+<div [ngClass]="{'card': true,
+                'm-3': true,
+                'blog-success': post.loveIts > 0,
+                'blog-danger': post.loveIts < 0}">
     <div class="card-header">
         <h1>{{ post.title }}</h1>
     </div>
